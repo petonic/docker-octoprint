@@ -5,3 +5,7 @@ config/timelapse
 config/uploads
 config/switch_gpio
 config/scripts/switch_gpio
+out
+rc.local
+supervisord.conf
+udev_rules.d
