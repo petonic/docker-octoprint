@@ -9,3 +9,4 @@ out
 rc.local
 supervisord.conf
 udev_rules.d
+cogwerx-mjpg-streamer-pi3/
