@@ -5,24 +5,50 @@ api:
   key: 1D8DF67AD9594E81A44830CF33936F55
 plugins:
   announcements:
+    _config_version: 1
     channels:
+      _blog:
+        read_until: 1513605600
       _important:
-        read_until: 1478614200
+        read_until: 1509547500
+      _octopi:
+        read_until: 1499253000
+      _plugins:
+        read_until: 1519603200
+      _releases:
+        read_until: 1513079100
   cura:
     cura_engine: /opt/cura/CuraEngine
   discovery:
     upnpUuid: 452f54a5-65e9-4251-918d-578923a26612
+  softwareupdate:
+    _config_version: 6
+    check_providers:
+      malyan_connection_fix: malyan_connection_fix
+printerProfiles:
+  default: _default
 serial:
   autoconnect: true
-  baudrate: 0
-  port: AUTO
+  baudrate: 115200
+  port: /dev/ttyACM0
 server:
   firstRun: false
+  onlineCheck:
+    enabled: true
+  pluginBlacklist:
+    enabled: true
   secretKey: Dnk5IiOXoMl7ZeKWLDugMEwjjgW3uWtE
   seenWizards:
-    corewizard: null
+    corewizard: 3
     cura: null
     softwareupdate: null
 slicing:
   defaultProfiles:
     cura: ultimaker
+webcam:
+  ffmpeg: ''
+  flipH: true
+  flipV: true
+  snapshot: http://192.168.86.126:8080/?action=snapshot
+  stream: http://192.168.86.126:8080/?action=stream
+  watermark: false

@@ -3,3 +3,5 @@ config/generated
 config/logs
 config/timelapse
 config/uploads
+config/switch_gpio
+config/scripts/switch_gpio
