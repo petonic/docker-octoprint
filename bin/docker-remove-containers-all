@@ -1,0 +1,4 @@
+#!/bin/sh
+
+set -x
+docker ps -a | rep -s 'print(f[0]) if n else None' | xargs docker rm -f

@@ -1,0 +1,5 @@
+#! /bin/sh
+
+set -x
+
+docker images | rep -s 'f[2] if "<none>" in f[1] else None' | xargs docker rmi -f

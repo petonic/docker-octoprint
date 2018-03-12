@@ -59,17 +59,16 @@ VOLUME /home/octoprint/.octoprint
 ###########
 # Install HA Proxy
 ###########
+EXPOSE 80 5000
+
 USER root
 RUN apt-get update && apt-get install -y --no-install-recommends haproxy
-CMD service haproxy stop; /bin/true
-
-EXPOSE 80 5000
 
 COPY haproxy.cfg /etc/haproxy/haproxy.cfg
 RUN echo 'ENABLED=1' >> /etc/default/haproxy
 
-ENV INITSYSTEM on
-
+# Don't think that I need the following 3 lines for using 'service'
+#ENV INITSYSTEM on
 #COPY rc.local /etc/rc.local
 #COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 

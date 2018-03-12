@@ -39,7 +39,7 @@ plugins:
       _octopi:
         read_until: 1499253000
       _plugins:
-        read_until: 1519603200
+        read_until: 1520726400
       _releases:
         read_until: 1513079100
   cura:
@@ -60,30 +60,10 @@ serial:
   baudrate: 115200
   port: /dev/ttyACM0
 server:
-  firstRun: false
-  onlineCheck:
-    enabled: true
-  pluginBlacklist:
-    enabled: true
-  secretKey: Dnk5IiOXoMl7ZeKWLDugMEwjjgW3uWtE
-  seenWizards:
-    corewizard: 3
-    cura: null
-    softwareupdate: null
-slicing:
-  defaultProfiles:
-    cura: ultimaker
-webcam:
-  ffmpeg: ''
-  flipH: true
-  flipV: true
-  snapshot: http://127.0.0.1:8080/webcam/?action=snapshot
-  stream: http://127.0.0.1:8080/webcam/?action=stream
-  watermark: false
-server:
+  host: 127.0.0.1
   commands:
-    ledOn: switch_gpio 18 on
     ledOff: switch_gpio 18 off
+    ledOn: switch_gpio 18 on
   firstRun: false
   onlineCheck:
     enabled: true
@@ -94,6 +74,9 @@ server:
     corewizard: 3
     cura: null
     telegram: 1
+slicing:
+  defaultProfiles:
+    cura: ultimaker
 system: {}
 temperature:
   profiles:
@@ -103,3 +86,10 @@ temperature:
   - bed: '50'
     extruder: '210'
     name: PLA
+webcam:
+  ffmpeg: ''
+  flipH: true
+  flipV: true
+  snapshot: http://127.0.0.1:8080/?action=snapshot
+  stream: http://127.0.0.1/webcam/?action=stream
+  watermark: false
