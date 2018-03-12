@@ -63,7 +63,7 @@ USER root
 RUN apt-get update && apt-get install -y --no-install-recommends haproxy
 CMD service haproxy stop; /bin/true
 
-EXPOSE 80
+EXPOSE 80 5000
 
 COPY haproxy.cfg /etc/haproxy/haproxy.cfg
 RUN echo 'ENABLED=1' >> /etc/default/haproxy

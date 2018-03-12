@@ -54,6 +54,8 @@ plugins:
 printerProfiles:
   default: _default
 serial:
+  additionalPorts:
+  - /dev/ttyACM0
   autoconnect: true
   baudrate: 115200
   port: /dev/ttyACM0
@@ -75,6 +77,29 @@ webcam:
   ffmpeg: ''
   flipH: true
   flipV: true
-  snapshot: http://192.168.86.126:8080/?action=snapshot
-  stream: http://192.168.86.126:8080/?action=stream
+  snapshot: http://127.0.0.1:8080/webcam/?action=snapshot
+  stream: http://127.0.0.1:8080/webcam/?action=stream
   watermark: false
+server:
+  commands:
+    ledOn: switch_gpio 18 on
+    ledOff: switch_gpio 18 off
+  firstRun: false
+  onlineCheck:
+    enabled: true
+  pluginBlacklist:
+    enabled: true
+  secretKey: l7FM5ko1FjzWnBPr8Dy9iuArUX4J9c1Z
+  seenWizards:
+    corewizard: 3
+    cura: null
+    telegram: 1
+system: {}
+temperature:
+  profiles:
+  - bed: '80'
+    extruder: '240'
+    name: ABS
+  - bed: '50'
+    extruder: '210'
+    name: PLA
