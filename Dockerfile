@@ -66,8 +66,12 @@ CMD service haproxy stop; /bin/true
 EXPOSE 80
 
 COPY haproxy.cfg /etc/haproxy/haproxy.cfg
-COPY rc.local /etc/rc.local
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+RUN echo 'ENABLED=1' >> /etc/default/haproxy
+
+ENV INITSYSTEM on
+
+#COPY rc.local /etc/rc.local
+#COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 CMD service haproxy start
 
