@@ -1,0 +1,8 @@
+petonic:
+  active: true
+  apikey: null
+  password: 45ae27a303da7ddda55fb3e5dad18aa887461597c96f111e4cecdb4054f8287156641a2f4ca9f195366e9299730fdcdce91b06994fbfbd19a24d6e5880a768d3
+  roles:
+  - user
+  - admin
+  settings: {}
